@@ -88,20 +88,63 @@ header .tagline {
 .game-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-btn {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.item-btn:hover {
+  transform: scale(1.05);
+}
+
+.item-btn img {
+  width: 50px;
+  height: 50px;
 }
 
 .air-fryer {
-  cursor: pointer;
-  transition: transform 0.1s;
+  text-align: center;
 }
 
-.air-fryer:active {
-  transform: scale(0.95);
+.progress-bar {
+  width: 200px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background-color: #ff6600;
+  transition: width 0.5s;
 }
 
 .fryer-img {
   width: 100px;
   height: 100px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.fryer-img:active {
+  transform: scale(0.95);
 }
 
 #fry-count {
