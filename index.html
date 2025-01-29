@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -28,9 +29,26 @@
   <section class="game" id="game">
     <div class="container">
       <h2>Crispy $FRY Mini-Game</h2>
-      <p>Click the air fryer to cook your $FRY and earn crispy rewards!</p>
+      <p>Choose an item to air fry and earn $FRY tokens!</p>
       <div class="game-container">
-        <div class="air-fryer" id="air-fryer">
+        <div class="item-selector">
+          <button class="item-btn" data-item="fries" data-reward="10">
+            <img src="https://img.icons8.com/color/96/000000/french-fries.png" alt="Fries">
+            <span>Fries (+10 $FRY)</span>
+          </button>
+          <button class="item-btn" data-item="chicken" data-reward="20">
+            <img src="https://img.icons8.com/color/96/000000/chicken.png" alt="Chicken">
+            <span>Chicken (+20 $FRY)</span>
+          </button>
+          <button class="item-btn" data-item="pizza" data-reward="30">
+            <img src="https://img.icons8.com/color/96/000000/pizza.png" alt="Pizza">
+            <span>Pizza (+30 $FRY)</span>
+          </button>
+        </div>
+        <div class="air-fryer">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
           <img src="https://img.icons8.com/color/96/000000/french-fries.png" alt="Air Fryer" class="fryer-img">
           <p id="fry-count">$FRY Cooked: 0</p>
         </div>
@@ -65,6 +83,7 @@
     </div>
   </footer>
 
+  <audio id="sizzle-sound" src="sizzle.mp3"></audio>
   <script src="script.js"></script>
 </body>
 </html>
